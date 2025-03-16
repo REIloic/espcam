@@ -1,9 +1,6 @@
-substitutions:
-  devicename: esp-cam
-  friendly_name: espcam
-
 esphome:
-  name:  $devicename
+  name: esp-cam-salon
+  friendly_name: ESP CAM SALON
 
 esp32:
   board: esp32cam
@@ -15,12 +12,12 @@ logger:
 
 # Enable Home Assistant API
 api:
-  reboot_timeout: 0s
   encryption:
-    key: ""
+    key: "nFKykj7eGDssXNnhvm67U6GMCQD4ocH1XHgnbWm8Zw4="
 
 ota:
-  password: ""
+  - platform: esphome
+    password: "ea8c7dc505682cf21b8b91984445ab14"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -28,8 +25,8 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Esp-Cam Fallback Hotspot"
-    password: "1234"
+    ssid: "Esp-Cam-Salon Fallback Hotspot"
+    password: "ysojfJABHqBn"
 
 captive_portal:
 
